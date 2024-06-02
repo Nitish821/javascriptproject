@@ -1,0 +1,45 @@
+// Step 1: Create a variable to hold your NFTs
+let anubabh = [];
+
+// Step 2: Create the mintNFT function
+function mintNFT(name, description, creator, dateCreated) {
+    // Create an NFT object with metadata
+    const nft = {
+        name: name,
+        description: description,
+        creator: creator,
+        dateCreated: dateCreated
+    };
+    // Store the NFT in the anubabh array
+    anubabh.push(nft);
+}
+
+// Step 3: Create the listNFTs function
+function listNFTs() {
+    anubabh.forEach(nft => {
+        console.log("Name: " + nft.name);
+        console.log("Description: " + nft.description);
+        console.log("Creator: " + nft.creator);
+        console.log("Date Created: " + nft.dateCreated);
+        console.log("-------------------------");
+    });
+}
+
+// Step 4: Create the getTotalSupply function
+function getTotalSupply() {
+    return anubabh.length;
+}
+
+// Call your functions below this line
+
+// Creating some NFTs with Indian-themed values
+mintNFT("Garam Masala", "Bollywood Movie", "Artist A", "2024-06-01");
+mintNFT("Bhangra Beats", "Saree", "Artist B", "2024-06-02");
+mintNFT("Taj Mahal", "Spicy Curry", "Artist C", "2024-06-03");
+mintNFT("Chai Time", "Henna Tattoo", "Artist D", "2024-06-04");
+
+// Displaying all NFTs
+listNFTs();
+
+// Printing the total number of NFTs
+console.log("Total NFTs: " + getTotalSupply())
